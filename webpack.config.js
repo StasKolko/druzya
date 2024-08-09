@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = (env) => {
   const paths = {
@@ -21,5 +22,8 @@ module.exports = (env) => {
       path: paths.output,
       clean: true
     },
+    plugins: [new HtmlWebpackPlugin({
+      template: paths.html
+    })],
   };
 };
