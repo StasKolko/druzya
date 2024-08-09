@@ -4,6 +4,7 @@ import { BuildOptions } from "./buildTypes";
 import { buildPlugins } from "./buildPlugins";
 import { buildResolves } from "./buildResolves";
 import { buildLoaders } from "./buildLoaders";
+import { buildDevServer } from "./buildDevServer";
 
 export const buildConfig = (options: BuildOptions): Configuration => {
   const { mode, port, paths, isDev } = options
@@ -22,5 +23,6 @@ export const buildConfig = (options: BuildOptions): Configuration => {
     plugins: buildPlugins(options),
     resolve: buildResolves(),
     devtool: isDev ? 'inline-source-map' : undefined,
+    devServer: isDev ? buildDevServer(options) : undefined,
   }
 }
