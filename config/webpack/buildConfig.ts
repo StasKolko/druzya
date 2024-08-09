@@ -21,7 +21,7 @@ export const buildConfig = (options: BuildOptions): Configuration => {
       rules: buildLoaders(options),
     },
     plugins: buildPlugins(options),
-    resolve: buildResolves(),
+    resolve: buildResolves(options),
     devtool: isDev ? 'inline-source-map' : undefined,
     devServer: isDev ? buildDevServer(options) : undefined,
   }

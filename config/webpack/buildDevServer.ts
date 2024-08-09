@@ -7,6 +7,7 @@ export const buildDevServer = (options: BuildOptions): DevServerConfiguration =>
   return {
     port: port,
     open: true,
-    hot: true
+    hot: true,
+    historyApiFallback: true
   }
 }

@@ -1,8 +1,19 @@
-import "./app.scss"
-import cls from "./app.module.scss";
+import { Link } from "react-router-dom"
+import { AppRouter } from "./providers/AppRouter"
 
 export const App = () => {
   return (
-    <div className={`${cls.app} app`}>Hi i am stas</div>
+    <div>
+      Hi i am stas
+      <ul>
+        <li>
+          <Link to="/">Главная</Link>
+        </li>
+        <li>
+          <Link to="/about">О нас</Link>
+        </li>
+      </ul>
+      <AppRouter />
+    </div>
   )
 }
