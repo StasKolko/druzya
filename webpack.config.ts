@@ -6,7 +6,7 @@ import { Configuration } from 'webpack';
 
 export default (env: BuildEnv) => {
   const paths: BuildPaths = {
-    entry: path.resolve(__dirname, "src", "index.ts"),
+    entry: path.resolve(__dirname, "src", "index.tsx"),
     output: path.resolve(__dirname, "dist"),
     src: path.resolve(__dirname, "src"),
     html: path.resolve(__dirname, "public", "index.html"),
