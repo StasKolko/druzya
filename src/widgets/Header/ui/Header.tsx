@@ -1,6 +1,6 @@
 // import { ThemeModeSwitcher } from "features/ThemeModeSwitcher";
 // import { ThemeColorSwitcher } from "features/ThemeColorSwitcher";
-// import { AppNav } from "features/AppNav";
+import { AppNav } from "features/AppNav";
 // import { LanguageSwitcher } from "features/LanguageSwitcher/ui/LanguageSwitcher";
 import cls from "./Header.module.scss";
 
@@ -12,7 +12,7 @@ export const Header = () => {
     <header className={cls.header}>
       <div className={cls.container}>
         <nav className={cls.navigation}>
-          {/* <AppNav className={cls.navigation__links} /> */}
+          <AppNav className={cls.navigation__links} />
         </nav>
 
         <div className={cls.actions}>

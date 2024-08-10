@@ -1,22 +1,21 @@
 import "./styles/index.scss";
 
-import { Link } from "react-router-dom"
-import { AppRouter } from "./providers/AppRouter"
-import { Header } from "widgets/Header"
+import { cn } from "shared/lib/classNames";
+import { Header } from "widgets/Header";
+import { Suspense } from "react";
+import { AppRouter } from "./providers/AppRouter";
+import { useTheme } from "./providers/ThemeProvider";
 
-export const App = () => {
+const App = () => {
+  const { themeMode, themeColor } = useTheme();
   return (
-    <div className="app dark blue">
-      <Header />
-      <ul>
-        <li>
-          <Link to="/">Главная</Link>
-        </li>
-        <li>
-          <Link to="/about">О нас</Link>
-        </li>
-      </ul>
-      <AppRouter />
+    <div className={cn("app", {}, [themeMode, themeColor])}>
+      <Suspense fallback="">
+        <Header />
+        <AppRouter />
+      </Suspense>
     </div>
-  )
-}
+  );
+};
+
+export default App;
