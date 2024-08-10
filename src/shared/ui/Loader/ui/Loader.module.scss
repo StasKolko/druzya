@@ -7,7 +7,7 @@
   height: var(--loader-size);
   border-radius: 50%;
   position: relative;
-  animation: rotateLoader 1s linear infinite;
+  animation: rotate-loader 1s linear infinite;
 }
 
 .loader::before,
@@ -18,7 +18,7 @@
   inset: 0;
   border-radius: 50%;
   border: 5px solid var(--first-circle-color);
-  animation: prixClipFix 2s linear infinite;
+  animation: prix-clip-fix 2s linear infinite;
 }
 
 .loader::after {
@@ -27,7 +27,7 @@
   border-color: var(--second-circle-color);
 }
 
-@keyframes rotateLoader {
+@keyframes rotate-loader {
   0% {
     transform: rotate(0deg);
   }
@@ -37,7 +37,7 @@
   }
 }
 
-@keyframes prixClipFix {
+@keyframes prix-clip-fix {
   0% {
     clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
   }
