@@ -1,3 +1,26 @@
+:root {
+  --h-destructive: 0;
+  --s-destructive: 63%;
+  --l-destructive: 20%;
+  --l-destructive-foreground: 85%;
+  --l-destructive-hover: 40%;
+  --l-destructive-foreground-hover: 98%;
+
+  --h-successful: 145;
+  --s-successful: 63%;
+  --l-successful: 20%;
+  --l-successful-foreground: 85%;
+  --l-successful-hover: 40%;
+  --l-successful-foreground-hover: 98%;
+
+  --destructive-hover: hsl(var(--h-destructive) var(--s-destructive) var(--l-destructive-hover));
+  --destructive-foreground-hover: hsl(var(--h-destructive) var(--s-foreground) var(--l-destructive-foreground-hover));
+  --successful: hsl(var(--h-successful) var(--s-successful) var(--l-successful));
+  --successful-foreground: hsl(var(--h-successful) var(--s-foreground) var(--l-successful-foreground));
+  --successful-hover: hsl(var(--h-successful) var(--s-successful) var(--l-successful-hover));
+  --successful-foreground-hover: hsl(var(--h-successful) var(--s-foreground) var(--l-successful-foreground-hover));
+}
+
 .light.blue {
   --background: hsl(0deg 0% 100%);
   --foreground: hsl(222.2deg 84% 4.9%);

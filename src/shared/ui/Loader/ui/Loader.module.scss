@@ -3,6 +3,7 @@
   --first-circle-color: var(--foreground);
   --second-circle-color: var(--primary);
 
+  display: block;
   width: var(--loader-size);
   height: var(--loader-size);
   border-radius: 50%;

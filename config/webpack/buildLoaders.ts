@@ -7,7 +7,8 @@ import { fileLoader } from './loaders/fileLoader';
 import { babelLoader } from './loaders/babelLoader';
 
 export const buildLoaders = (options: BuildOptions): RuleSetRule[] => {
-  const cssLoader = buildCssLoader(options);
+  const { isDev } = options;
+  const cssLoader = buildCssLoader(isDev);
 
   return [fileLoader, svgLoader, babelLoader, typescriptLoader, cssLoader];
 };

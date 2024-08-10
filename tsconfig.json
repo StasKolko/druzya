@@ -26,6 +26,7 @@
     "./config/jest/setupTests.ts",
     "./src/**/*.ts",
     "./src/**/*.tsx",
-    "./global.d.ts"
+    "./global.d.ts",
+    "./config/storybook"
   ]
 }

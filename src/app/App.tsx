@@ -11,7 +11,7 @@ import { useTheme } from './providers/ThemeProvider';
 const App = () => {
   const { themeMode, themeColor } = useTheme();
   return (
-    <div className={cn('app', {}, [themeMode, themeColor])}>
+    <div className={cn('app', themeMode, themeColor)}>
       <Suspense fallback="">
         <Header />
         <AppRouter />
