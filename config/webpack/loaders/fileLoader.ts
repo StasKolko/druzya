@@ -1,4 +1,4 @@
-import { RuleSetRule } from "webpack";
+import { RuleSetRule } from 'webpack';
 
 export const fileLoader: RuleSetRule = {
   test: /\.(png|jpe?g|gif|webp|woff|woff2|ttf)$/i,
@@ -7,4 +7,4 @@ export const fileLoader: RuleSetRule = {
       loader: 'file-loader',
     },
   ],
-}
+};

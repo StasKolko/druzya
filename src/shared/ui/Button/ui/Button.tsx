@@ -1,18 +1,20 @@
-"use client";
+'use client';
 
-import { cloneElement, isValidElement } from "react";
-import cls from "./Button.module.scss";
+import {
+  cloneElement, isValidElement, MouseEventHandler, ReactNode,
+} from 'react';
+import cls from './Button.module.scss';
 
-export type ButtonTypes = "button" | "reset" | "submit";
-export type ButtonOptions = "btn" | "link" | "icon";
+export type ButtonTypes = 'button' | 'reset' | 'submit';
+export type ButtonOptions = 'btn' | 'link' | 'icon';
 export type ButtonVariants =
-  | "primary"
-  | "secondary"
-  | "outline"
-  | "ghost"
-  | "destructive"
-  | "successful";
-export type ButtonSizes = "xs" | "sm" | "md" | "lg";
+  | 'primary'
+  | 'secondary'
+  | 'outline'
+  | 'ghost'
+  | 'destructive'
+  | 'successful';
+export type ButtonSizes = 'xs' | 'sm' | 'md' | 'lg';
 
 export type ButtonProps = {
   asChild?: boolean;
@@ -21,17 +23,17 @@ export type ButtonProps = {
   variant: ButtonVariants;
   size: ButtonSizes;
   className?: string;
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
-  children?: React.ReactNode;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
+  children?: ReactNode;
 };
 
 export function Button({
   asChild,
   option,
-  type = "button",
+  type = 'button',
   variant,
   size,
-  className = "",
+  className = '',
   children,
   onClick,
 }: ButtonProps) {

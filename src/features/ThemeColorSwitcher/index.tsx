@@ -1,1 +1,1 @@
-export { ThemeColorSwitcher } from "./ui/ThemeColorSwitcher";
+export { ThemeColorSwitcher } from './ui/ThemeColorSwitcher';

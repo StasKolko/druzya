@@ -1,8 +1,8 @@
-import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
+import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
 
-import { Button, ButtonSizes, ButtonVariants } from "shared/ui/Button";
+import { Button, ButtonSizes, ButtonVariants } from 'shared/ui/Button';
 
-import { useTheme } from "app/providers/ThemeProvider";
+import { useTheme } from 'app/providers/ThemeProvider';
 
 type ThemeModeSwitcherProps = {
   variant: ButtonVariants;
@@ -25,7 +25,7 @@ export const ThemeModeSwitcher = ({
       size={size}
       variant={variant}
     >
-      {themeMode === "dark" ? <MoonIcon /> : <SunIcon />}
+      {themeMode === 'dark' ? <MoonIcon /> : <SunIcon />}
     </Button>
   );
 };

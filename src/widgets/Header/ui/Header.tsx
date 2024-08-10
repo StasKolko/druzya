@@ -1,13 +1,12 @@
-import cls from "./Header.module.scss";
-
-import { ThemeModeSwitcher } from "features/ThemeModeSwitcher";
-import { ThemeColorSwitcher } from "features/ThemeColorSwitcher";
-import { LanguageSwitcher } from "features/LanguageSwitcher/ui/LanguageSwitcher";
-import { AppNav } from "features/AppNav";
+import { ThemeModeSwitcher } from 'features/ThemeModeSwitcher';
+import { ThemeColorSwitcher } from 'features/ThemeColorSwitcher';
+import { LanguageSwitcher } from 'features/LanguageSwitcher/ui/LanguageSwitcher';
+import { AppNav } from 'features/AppNav';
+import cls from './Header.module.scss';
 
 export const Header = () => {
-  const actionStyle = "outline";
-  const actionSize = "sm";
+  const actionStyle = 'outline';
+  const actionSize = 'sm';
 
   return (
     <header className={cls.header}>

@@ -5,23 +5,23 @@ export const classNames = (...props: classNamesProps[]): string => {
   const resultClasses: string[] = [];
 
   props.forEach((prop) => {
-    if (typeof prop === "string") {
+    if (typeof prop === 'string') {
       resultClasses.push(prop);
     } else if (Array.isArray(prop)) {
       resultClasses.push(...prop.filter(Boolean));
-    } else if (typeof prop === "object" && prop !== null) {
+    } else if (typeof prop === 'object' && prop !== null) {
       const keys = Object.keys(prop);
       for (let i = 0; i < keys.length; i += 1) {
         const key = keys[i];
         const value = prop[key];
-        if (typeof value === "boolean" && value) {
+        if (typeof value === 'boolean' && value) {
           resultClasses.push(key);
-        } else if (typeof value === "string") {
+        } else if (typeof value === 'string') {
           resultClasses.push(value);
         }
       }
     }
   });
 
-  return resultClasses.join(" ");
+  return resultClasses.join(' ');
 };

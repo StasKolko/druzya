@@ -1,8 +1,8 @@
-import { Button } from "shared/ui/Button";
-import { useTranslation } from "react-i18next";
-import { ReloadIcon } from "@radix-ui/react-icons";
-import { cn } from "shared/lib/classNames";
-import cls from "./ReloadButton.module.scss";
+import { Button } from 'shared/ui/Button';
+import { useTranslation } from 'react-i18next';
+import { ReloadIcon } from '@radix-ui/react-icons';
+import { cn } from 'shared/lib/classNames';
+import cls from './ReloadButton.module.scss';
 
 type ReloadButtonProps = {
   className?: string;
@@ -16,14 +16,14 @@ export const ReloadButton = ({ className }: ReloadButtonProps) => {
   };
   return (
     <Button
-      className={cn([className, cls["reload-button"]])}
+      className={cn([className, cls['reload-button']])}
       option="btn"
       variant="primary"
       size="sm"
       onClick={reloadToggle}
     >
       <ReloadIcon width={24} height={24} />
-      {t("Перезагрузить страницу")}
+      {t('Перезагрузить страницу')}
     </Button>
   );
 };

@@ -1,11 +1,11 @@
-import { useContext } from "react";
+import { useContext } from 'react';
 import {
   LOCAL_STORAGE_THEME_MODE_KEY,
   ThemeMode,
   ThemeColor,
   ThemeContext,
   LOCAL_STORAGE_THEME_COLOR_KEY,
-} from "./ThemeContext";
+} from './ThemeContext';
 
 interface UseThemeResult {
   toggleThemeMode: () => void;
@@ -20,13 +20,13 @@ export function useTheme(): UseThemeResult {
   } = useContext(ThemeContext);
 
   const toggleThemeMode = () => {
-    const newThemeMode = themeMode === "dark" ? "light" : "dark";
+    const newThemeMode = themeMode === 'dark' ? 'light' : 'dark';
     setThemeMode(newThemeMode);
     localStorage.setItem(LOCAL_STORAGE_THEME_MODE_KEY, newThemeMode);
   };
 
   const toggleThemeColor = () => {
-    const newThemeColor = themeColor === "blue" ? "yellow" : "blue";
+    const newThemeColor = themeColor === 'blue' ? 'yellow' : 'blue';
     setThemeColor(newThemeColor);
     localStorage.setItem(LOCAL_STORAGE_THEME_COLOR_KEY, newThemeColor);
   };

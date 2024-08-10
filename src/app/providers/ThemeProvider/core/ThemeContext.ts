@@ -1,25 +1,25 @@
-import { createContext } from "react";
+import { createContext } from 'react';
 
 export const themeColors = [
-  "blue",
-  "yellow",
-  "zinc",
-  "red",
-  "rose",
-  "orange",
-  "green",
-  "violet",
+  'blue',
+  'yellow',
+  'zinc',
+  'red',
+  'rose',
+  'orange',
+  'green',
+  'violet',
 ];
-export type ThemeMode = "light" | "dark";
+export type ThemeMode = 'light' | 'dark';
 export type ThemeColor =
-  | "blue"
-  | "yellow"
-  | "zinc"
-  | "red"
-  | "rose"
-  | "orange"
-  | "green"
-  | "violet";
+  | 'blue'
+  | 'yellow'
+  | 'zinc'
+  | 'red'
+  | 'rose'
+  | 'orange'
+  | 'green'
+  | 'violet';
 
 export type ThemeContextProps = {
   themeMode?: ThemeMode;
@@ -30,5 +30,5 @@ export type ThemeContextProps = {
 
 export const ThemeContext = createContext<ThemeContextProps>({});
 
-export const LOCAL_STORAGE_THEME_MODE_KEY = "theme";
-export const LOCAL_STORAGE_THEME_COLOR_KEY = "theme-color";
+export const LOCAL_STORAGE_THEME_MODE_KEY = 'theme';
+export const LOCAL_STORAGE_THEME_COLOR_KEY = 'theme-color';

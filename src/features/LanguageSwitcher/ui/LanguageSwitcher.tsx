@@ -1,8 +1,8 @@
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
-import { cn } from "shared/lib/classNames";
-import { Button, ButtonVariants, ButtonSizes } from "shared/ui/Button";
-import cls from "./LanguageSwitcher.module.scss";
+import { cn } from 'shared/lib/classNames';
+import { Button, ButtonVariants, ButtonSizes } from 'shared/ui/Button';
+import cls from './LanguageSwitcher.module.scss';
 
 type LanguageSwitcherProps = {
   variant: ButtonVariants;
@@ -18,7 +18,7 @@ export const LanguageSwitcher = ({
   const { t, i18n } = useTranslation();
 
   const toggleLanguage = () => {
-    i18n.changeLanguage(i18n.language === "ru" ? "en" : "ru");
+    i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
   };
 
   return (
@@ -29,7 +29,7 @@ export const LanguageSwitcher = ({
       size={size}
       variant={variant}
     >
-      {t("язык")}
+      {t('язык')}
     </Button>
   );
 };

@@ -1,6 +1,6 @@
-import { Button, ButtonSizes, ButtonVariants } from "shared/ui/Button";
+import { Button, ButtonSizes, ButtonVariants } from 'shared/ui/Button';
 
-import { useTheme } from "app/providers/ThemeProvider";
+import { useTheme } from 'app/providers/ThemeProvider';
 
 type ThemeColorSwitcherProps = {
   variant: ButtonVariants;
@@ -25,10 +25,10 @@ export const ThemeColorSwitcher = ({
     >
       <span
         style={{
-          background: "var(--primary)",
-          width: "60%",
-          height: "60%",
-          borderRadius: "var(--radius)",
+          background: 'var(--primary)',
+          width: '60%',
+          height: '60%',
+          borderRadius: 'var(--radius)',
         }}
       />
     </Button>

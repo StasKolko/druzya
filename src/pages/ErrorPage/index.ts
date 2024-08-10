@@ -1,1 +1,1 @@
-export { ErrorPageAsync as ErrorPage } from "./ui/ErrorPageAsync";
+export { ErrorPageAsync as ErrorPage } from './ui/ErrorPageAsync';
