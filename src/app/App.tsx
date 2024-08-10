@@ -1,10 +1,13 @@
+import "./styles/index.scss";
+
 import { Link } from "react-router-dom"
 import { AppRouter } from "./providers/AppRouter"
+import { Header } from "widgets/Header"
 
 export const App = () => {
   return (
-    <div>
-      Hi i am stas
+    <div className="app dark blue">
+      <Header />
       <ul>
         <li>
           <Link to="/">Главная</Link>
