@@ -13,7 +13,7 @@ export const buildConfig = (options: BuildOptions): Configuration => {
     mode,
     entry: paths.entry,
     output: {
-      filename: '[name].[contenthash:5].js',
+      filename: isDev ? '[name].[contenthash:5].js' : '[contenthash:5].js',
       path: paths.output,
       clean: true
     },
