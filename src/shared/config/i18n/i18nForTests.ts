@@ -12,6 +12,9 @@ i18n
       escapeValue: false,
     },
     resources: { ru: { translations: {} } },
+    backend: {
+      loadPath: '/locales/{{lng}}/{{ns}}.json',
+    },
   });
 
 export default i18n;

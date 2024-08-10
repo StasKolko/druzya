@@ -1,7 +1,8 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { useTranslation } from 'react-i18next';
-import { Button, ButtonProps } from './Button';
+import { useEffect } from 'react';
+import { Button } from './Button';
 
 export default {
   title: 'shared/Button',
@@ -10,6 +11,8 @@ export default {
 
 const Template:
   ComponentStory<typeof Button> = (args) => {
+    useEffect(() => { console.log('Run something'); }, []);
+
     const { t } = useTranslation();
 
     return <Button {...args}>{t('кнопка')}</Button>;

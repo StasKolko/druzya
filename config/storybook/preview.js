@@ -15,8 +15,8 @@ export const globalTypes = {
     toolbar: {
       icon: 'globe',
       items: [
-        { value: 'ru', right: 'RU', title: 'Русский' },
-        { value: 'en', right: 'US', title: 'English' },
+        { value: 'ru', title: 'Русский' },
+        { value: 'en', title: 'English' },
       ],
       showName: true,
     },
@@ -59,7 +59,7 @@ export const parameters = {
   },
 };
 
-addDecorator((Story, context) => {
+addDecorator((story, context) => {
   const { locale } = context.globals;
 
   useEffect(() => {
@@ -69,18 +69,18 @@ addDecorator((Story, context) => {
   return (
     <Suspense fallback="">
       <I18nextProvider i18n={i18n}>
-        <Story />
+        {story()}
       </I18nextProvider>
     </Suspense>
   );
 });
 addDecorator(StyleDecorator);
-addDecorator((Story, context) => {
+addDecorator((story, context) => {
   const { themeMode, themeColor } = context.globals;
 
   return (
     <div className={`app ${themeMode} ${themeColor}`}>
-      <Story />
+      {story()}
     </div>
   );
 });
