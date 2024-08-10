@@ -20,3 +20,5 @@ declare module "*.woff";
 declare module "*.woff2";
 declare module "*.ttf";
 declare module "*.gif";
+
+declare const __IS_DEV__: boolean;

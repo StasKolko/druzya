@@ -1,5 +1,7 @@
 import "./styles/index.scss";
 
+import "shared/config/i18n/i18n";
+
 import { cn } from "shared/lib/classNames";
 import { Header } from "widgets/Header";
 import { Suspense } from "react";

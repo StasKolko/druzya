@@ -1,4 +1,9 @@
-import { ProgressPlugin, WebpackPluginInstance } from "webpack";
+import {
+  DefinePlugin,
+  HotModuleReplacementPlugin,
+  ProgressPlugin,
+  WebpackPluginInstance
+} from "webpack";
 import { BuildOptions } from "./buildTypes";
 
 import HtmlWebpackPlugin from 'html-webpack-plugin';
@@ -14,12 +19,16 @@ export const buildPlugins = (options: BuildOptions): WebpackPluginInstance[] => 
     new MiniCssExtractPlugin({
       filename: "css/[contenthash:8].css",
       chunkFilename: "css/[contenthash:8].css",
-    })
+    }),
+    new DefinePlugin({
+      __IS_DEV__: JSON.stringify(isDev),
+    }),
   ]
 
   if (isDev) {
     plugins.push(
-      new ProgressPlugin()
+      new ProgressPlugin(),
+      new HotModuleReplacementPlugin()
     )
   }
 

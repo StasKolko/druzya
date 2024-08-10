@@ -1,8 +1,9 @@
+import cls from "./Header.module.scss";
+
 import { ThemeModeSwitcher } from "features/ThemeModeSwitcher";
 import { ThemeColorSwitcher } from "features/ThemeColorSwitcher";
+import { LanguageSwitcher } from "features/LanguageSwitcher/ui/LanguageSwitcher";
 import { AppNav } from "features/AppNav";
-// import { LanguageSwitcher } from "features/LanguageSwitcher/ui/LanguageSwitcher";
-import cls from "./Header.module.scss";
 
 export const Header = () => {
   const actionStyle = "outline";
@@ -18,7 +19,7 @@ export const Header = () => {
         <div className={cls.actions}>
           <ThemeColorSwitcher variant={actionStyle} size={actionSize} />
           <ThemeModeSwitcher variant={actionStyle} size={actionSize} />
-          {/* <LanguageSwitcher variant={actionStyle} size={actionSize} /> */}
+          <LanguageSwitcher variant={actionStyle} size={actionSize} />
         </div>
       </div>
     </header>
