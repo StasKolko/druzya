@@ -1,0 +1,9 @@
+.link.underline {
+  text-decoration: underline 0.125rem; /* 2px */
+  text-underline-offset: 0.125rem;     /* 2px */
+  transition: text-underline-offset 150ms ease-in-out;
+}
+
+.link.underline:hover {
+  text-underline-offset: 0.25rem;
+}

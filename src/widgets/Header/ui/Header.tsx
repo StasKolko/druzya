@@ -1,5 +1,5 @@
-// import { ThemeModeSwitcher } from "features/ThemeModeSwitcher";
-// import { ThemeColorSwitcher } from "features/ThemeColorSwitcher";
+import { ThemeModeSwitcher } from "features/ThemeModeSwitcher";
+import { ThemeColorSwitcher } from "features/ThemeColorSwitcher";
 import { AppNav } from "features/AppNav";
 // import { LanguageSwitcher } from "features/LanguageSwitcher/ui/LanguageSwitcher";
 import cls from "./Header.module.scss";
@@ -16,9 +16,9 @@ export const Header = () => {
         </nav>
 
         <div className={cls.actions}>
-          {/* <ThemeColorSwitcher variant={actionStyle} size={actionSize} />
+          <ThemeColorSwitcher variant={actionStyle} size={actionSize} />
           <ThemeModeSwitcher variant={actionStyle} size={actionSize} />
-          <LanguageSwitcher variant={actionStyle} size={actionSize} /> */}
+          {/* <LanguageSwitcher variant={actionStyle} size={actionSize} /> */}
         </div>
       </div>
     </header>

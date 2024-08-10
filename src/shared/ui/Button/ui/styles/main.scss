@@ -1,0 +1,43 @@
+.btn,
+.link,
+.icon {
+  --transition: 250ms ease-in-out;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font: var(--text-sm);
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+  background: none;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  transition:
+    color var(--transition),
+    opacity var(--transition),
+    background-color var(--transition);
+}
+
+.btn:focus-visible,
+.link:focus-visible,
+.icon:focus-visible {
+  outline: 0.125rem solid var(--primary); /* 2px */
+  outline-offset: 0.125rem; /* 2px */
+}
+
+.btn:disabled,
+.link:disabled,
+.icon:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.btn.disabled,
+.link.disabled,
+.icon.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
