@@ -5,7 +5,7 @@ export const classNames = (...props: classNamesProps[]): string => {
   const resultClasses: string[] = [];
 
   props.forEach((prop) => {
-    if (typeof prop === 'string') {
+    if (typeof prop === 'string' && prop.length > 0) {
       resultClasses.push(prop);
     } else if (Array.isArray(prop)) {
       resultClasses.push(...prop.filter((item) => typeof item === 'string'));

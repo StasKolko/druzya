@@ -3,6 +3,7 @@
 import {
   cloneElement, isValidElement, MouseEventHandler, ReactNode,
 } from 'react';
+import { cn } from 'shared/lib/classNames';
 import cls from './Button.module.scss';
 
 export type ButtonTypes = 'button' | 'reset' | 'submit';
@@ -38,7 +39,7 @@ export function Button({
   onClick,
 }: ButtonProps) {
   const buttonProps = {
-    className: `${cls[option]} ${cls[variant]} ${cls[size]} ${className}`,
+    className: cn(cls[option], cls[variant], cls[size], className),
     onClick,
   };
 
