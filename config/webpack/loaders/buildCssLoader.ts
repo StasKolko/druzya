@@ -10,8 +10,11 @@ export const buildCssLoader = ({ isDev }: BuildOptions): RuleSetRule => ({
       loader: 'css-loader',
       options: {
         modules: {
-          auto: (resourcePath: string) => Boolean(resourcePath.includes('.module.')),
-          localIdentName: isDev ? '[path][name]__[hash:base64:5]' : '[hash:base64:5]',
+          auto: (resourcePath: string) => Boolean(resourcePath
+            .includes('.module.')),
+          localIdentName: isDev
+            ? '[path][name]__[hash:base64:5]'
+            : '[hash:base64:5]',
         },
       },
     },

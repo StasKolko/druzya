@@ -7,9 +7,11 @@ import {
   ThemeColor,
 } from './ThemeContext';
 
-const defaultThemeMode = (localStorage.getItem(LOCAL_STORAGE_THEME_MODE_KEY) as ThemeMode) || 'dark';
+const defaultThemeMode = (localStorage
+  .getItem(LOCAL_STORAGE_THEME_MODE_KEY) as ThemeMode) || 'dark';
 
-const defaultThemeColor = (localStorage.getItem(LOCAL_STORAGE_THEME_COLOR_KEY) as ThemeColor) || 'blue';
+const defaultThemeColor = (localStorage
+  .getItem(LOCAL_STORAGE_THEME_COLOR_KEY) as ThemeColor) || 'blue';
 
 const ThemeProvider: FC = ({ children }) => {
   const [themeMode, setThemeMode] = useState<ThemeMode>(defaultThemeMode);

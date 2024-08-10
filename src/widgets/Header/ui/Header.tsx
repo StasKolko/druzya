@@ -1,6 +1,7 @@
 import { ThemeModeSwitcher } from 'features/ThemeModeSwitcher';
 import { ThemeColorSwitcher } from 'features/ThemeColorSwitcher';
-import { LanguageSwitcher } from 'features/LanguageSwitcher/ui/LanguageSwitcher';
+import { LanguageSwitcher } from
+  'features/LanguageSwitcher/ui/LanguageSwitcher';
 import { AppNav } from 'features/AppNav';
 import cls from './Header.module.scss';
 
