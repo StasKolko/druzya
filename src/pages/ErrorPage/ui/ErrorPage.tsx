@@ -1,5 +1,5 @@
 import { cn } from "shared/lib/classNames";
-// import { ReloadButton } from "features/ReloadButton";
+import { ReloadButton } from "features/ReloadButton";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "app/providers/ThemeProvider";
 import cls from "./ErrorPage.module.scss";
@@ -15,7 +15,7 @@ const ErrorPage = ({ className }: ErrorPageProps) => {
   return (
     <div className={cn(cls["error-page"], [className, themeMode, themeColor])}>
       <h1>{t("Ой! Произошла ошибка!")}</h1>
-      {/* <ReloadButton /> */}
+      <ReloadButton />
     </div>
   );
 };
