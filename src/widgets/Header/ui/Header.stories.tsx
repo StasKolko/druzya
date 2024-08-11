@@ -8,6 +8,6 @@ export default {
 } as ComponentMeta<typeof Header>;
 
 const Template:
-  ComponentStory<typeof Header> = (args) => <Header {...args} />;
+  ComponentStory<typeof Header> = (args: {}) => <Header {...args} />;
 
 export const Main = Template.bind({});
