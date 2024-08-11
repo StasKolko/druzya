@@ -10,7 +10,9 @@ const NotFoundPage = ({ className }: NotFoundPageProps) => {
   const { t } = useTranslation();
 
   return (
-    <div className={cn(cls['not-found-page'], [className])}>{t('404')}</div>
+    <div className={cn(cls['not-found-page'], [className])}>
+      {t('Страница не найдена')}
+    </div>
   );
 };
 
